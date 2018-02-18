@@ -30,18 +30,18 @@ Addon.prototype.getProviders = function () {
     });
 };
 
-Addon.prototype.getAddonName = function (pkg: string) {
+Addon.prototype.getName = function (pkg: string) {
     return this.registry[pkg].name;
 }
 
-Addon.prototype.getAddonSetup = function (pkg: string) {
+Addon.prototype.getSetup = function (pkg: string) {
     return this.registry[pkg].setup;
 }
 
-Addon.prototype.getAddonLogo = function (pkg: string) {
+Addon.prototype.getLogo = function (pkg: string) {
     return this.registry[pkg].logo;
 }
 
-Addon.prototype.getAddonType = function (pkg: string) {
+Addon.prototype.getComponent = function (pkg: string) {
     return this.registry[pkg].ctor;
 }

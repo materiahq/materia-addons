@@ -1,4 +1,5 @@
 import { Addon } from "./addon";
+import { AddonSetup } from "./addon-setup";
 
 export class AddonManager {
 	getLogo(pkg: string): string {
@@ -10,14 +11,18 @@ export class AddonManager {
 	}
 
 	getName(pkg: string): string {
-		return Addon.prototype.getAddonName(pkg);
+		return Addon.prototype.getName(pkg);
 	}
 
-	getType(pkg: string) {
-		return Addon.prototype.getAddonType(pkg);
+	getViewComponent(pkg: string) {
+		return Addon.prototype.getComponent(pkg);
+	}
+
+	getSetupComponent(pkg: string) {
+		return AddonSetup.prototype.getComponent(pkg);
 	}
 
 	getProviders() {
-		return Addon.prototype.getProviders();
+		return [...Addon.prototype.getProviders(), ...AddonSetup.prototype.getProviders()];
 	}
 }
