@@ -1,5 +1,6 @@
 import { Addon } from "./addon";
 import { AddonSetup } from "./addon-setup";
+import { AddonComponent } from "./addon-component";
 
 export class AddonManager {
 	getLogo(pkg: string): string {
@@ -20,6 +21,10 @@ export class AddonManager {
 
 	getSetupComponent(pkg: string) {
 		return AddonSetup.prototype.getComponent(pkg);
+	}
+
+	getAdditionalComponents(pkg: string) {
+		return AddonComponent.prototype.getComponents(pkg);
 	}
 
 	getProviders() {
