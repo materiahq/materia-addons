@@ -27,6 +27,10 @@ export class AddonManager {
 		return AddonComponent.prototype.getComponents(pkg);
 	}
 
+	getEntryComponents(pkg: string) {
+		return AddonComponent.prototype.getEntryComponents(pkg);
+	}
+
 	getProviders() {
 		return [...Addon.prototype.getProviders(), ...AddonSetup.prototype.getProviders()];
 	}
