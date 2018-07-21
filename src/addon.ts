@@ -9,5 +9,5 @@ export function Addon(pkg: string) {
 Addon.prototype.registry = {};
 
 Addon.prototype.getModule = function (pkg: string) {
-    return this.registry[pkg] && this.registry[pkg].ctor.constructor.name;
+    return this.registry[pkg] && this.registry[pkg].ctor.name;
 }
