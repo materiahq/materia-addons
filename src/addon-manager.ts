@@ -1,37 +1,17 @@
 import { Addon } from "./addon";
 import { AddonSetup } from "./addon-setup";
-import { AddonComponent } from "./addon-component";
+import { AddonView } from "./addon-view";
 
 export class AddonManager {
-	getLogo(pkg: string): string {
-		return Addon.prototype.getLogo(pkg);
-	}
-
-	getSetup(pkg: string): any[] {
-		return Addon.prototype.getSetup(pkg);
-	}
-
-	getName(pkg: string): string {
-		return Addon.prototype.getName(pkg);
-	}
-
 	getViewComponent(pkg: string) {
-		return Addon.prototype.getComponent(pkg);
+		return AddonView.prototype.getComponent(pkg);
 	}
 
 	getSetupComponent(pkg: string) {
 		return AddonSetup.prototype.getComponent(pkg);
 	}
 
-	getAdditionalComponents(pkg: string) {
-		return AddonComponent.prototype.getComponents(pkg);
-	}
-
-	getEntryComponents(pkg: string) {
-		return AddonComponent.prototype.getEntryComponents(pkg);
-	}
-
-	getProviders() {
-		return [...Addon.prototype.getProviders(), ...AddonSetup.prototype.getProviders()];
+	getModule(pkg: string) {
+		return Addon.prototype.getModule(pkg);
 	}
 }

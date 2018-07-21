@@ -5,7 +5,7 @@ export default {
 	input: "src/main.ts",
 	output: {
 		file: "dist/bundle.js",
-		format: "system"
+		format: "es",
 	},
 	plugins: [
 		resolve({
