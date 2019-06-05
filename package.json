@@ -4,8 +4,8 @@
   "main": "bundle.js",
   "license": "MIT",
   "scripts": {
-	"build": "rollup -c && ncp package.json dist/package.json",
-	"clean": "rimraf dist/bundle.js"
+    "build": "rollup -c && ncp package.json dist/package.json",
+    "clean": "rimraf dist/bundle.js"
   },
   "devDependencies": {
     "ncp": "^2.0.0",
